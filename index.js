@@ -8,6 +8,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
 app.get("/", (req, res)=> {
     res.render("index.ejs");
 });
@@ -36,6 +39,13 @@ app.post("/Post", (req, res)=>{
         blogArticle: article
     });
 });
+
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack); // Log the error stack
+    res.status(500).send('Something broke!'); // Respond with a 500 error
+  });
 
 app.listen(PORT, ()=>{
     console.log(`listening on the port ${PORT}.`);
