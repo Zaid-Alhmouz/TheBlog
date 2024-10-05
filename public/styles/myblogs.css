@@ -1,0 +1,24 @@
+.blogs-gallery{
+    margin: 15px 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-color: #0f4343;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.blog-title h1, .blog-article p{
+    font-family: 'Changa' serif;
+    color:#0f4343;
+}
+
+.blog-title h1{
+    position: relative;
+    padding: 5px 0;
+    margin: 5px 0;
+    justify-content: center;
+    text-align: center;
+}

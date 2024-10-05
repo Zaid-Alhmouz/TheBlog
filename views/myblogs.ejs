@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blog | My Blogs</title>
+
+    <link 
+    rel="stylesheet"
+    href="/styles/main.css"
+    />
+
+    <link 
+    rel="stylesheet"
+    href="/styles/editor.css"
+    />
+
+    <link
+    rel="stylesheet"
+    href="/styles/myblogs.css"
+    />
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <%- include("partials/header.ejs")  %>
+
+    <div class="blogs-gallery">
+        <div class="blog-title">
+            <h1><%= blogTitle %></h1>
+        </div>
+        <div class="blog-article">
+            <p><%= blogArticle %></p>
+        </div>
+    </div>
+
+
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>
